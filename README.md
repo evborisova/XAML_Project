@@ -1,6 +1,6 @@
 # XAML_Project
 
-This repository includes and API and a XAML project dedicated to managing assignments for consultants in a company.
+This repository includes an API and a XAML project dedicated to managing assignments for consultants in a company.
 
 Potential user of the app is a project manager or assignments manager.
 
