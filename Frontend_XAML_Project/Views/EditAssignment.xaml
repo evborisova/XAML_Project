@@ -1,0 +1,35 @@
+﻿<ContentDialog
+    x:Class="AccountsManager.Views.EditAssignment"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AccountsManager.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Edit assignment"
+    PrimaryButtonText="OK"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+	SecondaryButtonText="Cancel"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+	<ContentDialog.DataContext>
+		<Binding Path="assignment" />
+	</ContentDialog.DataContext>
+	
+	<StackPanel>
+		<TextBlock Text="Assignment name" />
+		<TextBox Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+		<TextBlock Text="Description" />
+		<TextBox Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+		<TextBlock Text="Start date" />
+		<DatePicker x:Name="StartDatePicker" DateChanged="DatePicker_StartDateChanged"/>
+		<TextBlock Text="End date" />
+		<DatePicker x:Name="EndDatePicker" DateChanged="DatePicker_EndDateChanged"/>
+		<TextBlock Text="Cost" />
+		<TextBox Text="{Binding Cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+		<TextBlock Text="Working hours (in percent)" />
+		<TextBox Text="{Binding WorkingHoursPercentage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+		<TextBlock Text="Employee id number" />
+		<TextBox Text="{Binding EmployeeId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+	</StackPanel>
+</ContentDialog>

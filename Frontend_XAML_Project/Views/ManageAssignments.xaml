@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="AccountsManager.Views.ManageAssignments"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AccountsManager.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:uc="using:AccountsManager.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+	Loaded="Page_Loaded">
+
+  <ScrollViewer>
+	<StackPanel>
+		<TextBlock x:Name="UpdateText" Text="Updating..."></TextBlock>
+		<Button Click="AddAssignment" Content="Add Assignment" HorizontalAlignment="Right" Margin="12,0,12,0"></Button>
+
+		<ListView x:Name="Assignments" IsItemClickEnabled="True" ItemClick="Assignments_ItemClick">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<Border CornerRadius="6"
+							BorderBrush="Gray"
+							Background="LightGray"
+							BorderThickness="2"
+							Padding="8"
+							Margin="4">
+						<StackPanel Orientation="Horizontal" >
+							<TextBlock Text="{Binding Name}" FontWeight="Bold" />
+							<TextBlock Margin="5,0,0,0" Text="starting at" />
+							<TextBlock Margin="5,0,0,0" Text="{Binding StartDate}" FontWeight="Bold" />
+							<TextBlock Margin="5,0,0,0" Text="and ending at" />
+							<TextBlock Margin="5,0,0,0" Text="{Binding EndDate}" FontWeight="Bold" />
+							<TextBlock Margin="5,0,0,0" Text="with cost" />
+							<TextBlock Margin="5,0,0,0" Text="{Binding Cost}" FontWeight="Bold" />
+							<TextBlock Margin="5,0,0,0" Text="and percentage" />
+							<TextBlock Margin="5,0,0,0" Text="{Binding WorkingHoursPercentage}" FontWeight="Bold" />
+						</StackPanel>
+					</Border>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackPanel>
+  </ScrollViewer>
+</Page>
