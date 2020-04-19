@@ -42,9 +42,3 @@ INSERT [dbo].[Assignments] ([Id], [Name], [Description], [Cost], [WorkingHoursPe
 GO
 SET IDENTITY_INSERT [dbo].[Assignments] OFF
 GO
-INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20200309201855_InitialCreate', N'3.1.2')
-GO
-INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20200309201940_Init', N'3.1.2')
-GO
-INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20200328164734_AddEmployeeToAssignment', N'3.1.2')
-GO
